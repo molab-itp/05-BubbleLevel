@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABB6357429A33E4F0000B491 /* BubbleLevelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB6357329A33E4F0000B491 /* BubbleLevelApp.swift */; };
 		ABD70D3129A33AFA0038BCDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD70D3029A33AFA0038BCDB /* Assets.xcassets */; };
 		ABD70D3429A33AFA0038BCDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD70D3329A33AFA0038BCDB /* Preview Assets.xcassets */; };
 		ABD70D4229A33B7D0038BCDB /* OrientationDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD70D3A29A33B7D0038BCDB /* OrientationDataView.swift */; };
@@ -15,10 +16,10 @@
 		ABD70D4529A33B7D0038BCDB /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD70D3D29A33B7D0038BCDB /* DoubleExtension.swift */; };
 		ABD70D4729A33B7D0038BCDB /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD70D3F29A33B7D0038BCDB /* MotionDetector.swift */; };
 		ABD70D4829A33B7D0038BCDB /* BubbleLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD70D4029A33B7D0038BCDB /* BubbleLevel.swift */; };
-		ABD70D4929A33B7D0038BCDB /* BubbleLevelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD70D4129A33B7D0038BCDB /* BubbleLevelApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABB6357329A33E4F0000B491 /* BubbleLevelApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleLevelApp.swift; sourceTree = "<group>"; };
 		ABD70D2929A33AF90038BCDB /* BubbleLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD70D3029A33AFA0038BCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABD70D3329A33AFA0038BCDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		ABD70D3E29A33B7D0038BCDB /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		ABD70D3F29A33B7D0038BCDB /* MotionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
 		ABD70D4029A33B7D0038BCDB /* BubbleLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleLevel.swift; sourceTree = "<group>"; };
-		ABD70D4129A33B7D0038BCDB /* BubbleLevelApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleLevelApp.swift; path = "../../../05-BubbleLevel-raw/BubbleLevelApp.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		ABD70D2B29A33AF90038BCDB /* BubbleLevel */ = {
 			isa = PBXGroup;
 			children = (
-				ABD70D4129A33B7D0038BCDB /* BubbleLevelApp.swift */,
+				ABB6357329A33E4F0000B491 /* BubbleLevelApp.swift */,
 				ABD70D3C29A33B7D0038BCDB /* LevelView.swift */,
 				ABD70D4029A33B7D0038BCDB /* BubbleLevel.swift */,
 				ABD70D3A29A33B7D0038BCDB /* OrientationDataView.swift */,
@@ -159,7 +159,7 @@
 				ABD70D4529A33B7D0038BCDB /* DoubleExtension.swift in Sources */,
 				ABD70D4829A33B7D0038BCDB /* BubbleLevel.swift in Sources */,
 				ABD70D4429A33B7D0038BCDB /* LevelView.swift in Sources */,
-				ABD70D4929A33B7D0038BCDB /* BubbleLevelApp.swift in Sources */,
+				ABB6357429A33E4F0000B491 /* BubbleLevelApp.swift in Sources */,
 				ABD70D4229A33B7D0038BCDB /* OrientationDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
