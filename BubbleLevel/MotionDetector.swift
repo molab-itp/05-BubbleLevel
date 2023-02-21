@@ -26,16 +26,6 @@ class MotionDetector: ObservableObject {
     }
     
     func start() {
-        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-        orientationObserver = NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
-            switch UIDevice.current.orientation {
-            case .faceUp, .faceDown, .unknown:
-                break
-            default:
-                self?.currentOrientation = UIDevice.current.orientation
-            }
-        }
-        
         if motionManager.isDeviceMotionAvailable {
             motionManager.startDeviceMotionUpdates()
             
@@ -45,6 +35,18 @@ class MotionDetector: ObservableObject {
         } else {
             print("Motion data isn't available on this device.")
         }
+
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        
+        orientationObserver = NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
+            switch UIDevice.current.orientation {
+            case .faceUp, .faceDown, .unknown:
+                break
+            default:
+                self?.currentOrientation = UIDevice.current.orientation
+            }
+        }
+        
     }
     
     func updateMotionData() {
