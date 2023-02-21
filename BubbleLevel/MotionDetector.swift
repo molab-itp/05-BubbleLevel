@@ -46,7 +46,6 @@ class MotionDetector: ObservableObject {
                 self?.currentOrientation = UIDevice.current.orientation
             }
         }
-        
     }
     
     func updateMotionData() {
