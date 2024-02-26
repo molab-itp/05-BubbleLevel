@@ -1,37 +1,37 @@
 /*
-See the License.txt file for this sample’s licensing information.
-*/
+ See the License.txt file for this sample’s licensing information.
+ */
 
 import SwiftUI
 
 struct BubbleLevel: View {
     @EnvironmentObject var detector: MotionDetector
-
+    
     let range = Double.pi
     let levelSize: CGFloat = 300
-
+    
     var bubbleXPosition: CGFloat {
         let zeroBasedRoll = detector.roll + range / 2
         let rollAsFraction = zeroBasedRoll / range
         return rollAsFraction * levelSize
     }
-
+    
     var bubbleYPosition: CGFloat {
         let zeroBasedPitch = detector.pitch + range / 2
         let pitchAsFraction = zeroBasedPitch / range
         return pitchAsFraction * levelSize
     }
-
+    
     var verticalLine: some View {
         Rectangle()
             .frame(width: 0.5, height: 40)
     }
-
+    
     var horizontalLine: some View {
         Rectangle()
             .frame(width: 40, height: 0.5)
     }
-
+    
     var body: some View {
         Circle()
             .foregroundStyle(Color.secondary.opacity(0.25))
@@ -61,12 +61,22 @@ struct BubbleLevel: View {
                         .position(x: levelSize, y: levelSize / 2)
                 }
             )
+            .onAppear {
+                print("BubbleLevel onAppear")
+//                detector.onUpdate = myOnUpdate
+            }
     }
+    
+    func myOnUpdate() {
+        print("myOnUpdate")
+    }
+
 }
+
 
 struct BubbleLevel_Previews: PreviewProvider {
     @StateObject static var motionDetector = MotionDetector(updateInterval: 0.01).started()
-
+    
     static var previews: some View {
         BubbleLevel()
             .environmentObject(motionDetector)
