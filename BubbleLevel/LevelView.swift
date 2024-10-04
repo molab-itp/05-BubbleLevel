@@ -22,12 +22,8 @@ struct LevelView: View {
     }
 }
 
-struct LevelView_Previews: PreviewProvider {
-    @StateObject static var motionDetector = MotionDetector(updateInterval: 0.01).started()
-    
-    static var previews: some View {
-        LevelView()
-            .environmentObject(motionDetector)
-    }
+#Preview {
+    LevelView()
+    .environmentObject(MotionDetector(updateInterval: 0.01).started())
 }
                                          

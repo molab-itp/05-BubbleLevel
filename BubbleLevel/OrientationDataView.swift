@@ -25,11 +25,7 @@ struct OrientationDataView: View {
     }
 }
 
-struct OrientationDataView_Previews: PreviewProvider {
-    @StateObject static private var motionDetector = MotionDetector(updateInterval: 0.01).started()
-    
-    static var previews: some View {
-        OrientationDataView()
-            .environmentObject(motionDetector)
-    }
+#Preview {
+    OrientationDataView()
+        .environmentObject(MotionDetector(updateInterval: 0.01).started())
 }

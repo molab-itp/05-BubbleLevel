@@ -74,11 +74,7 @@ struct BubbleLevel: View {
 }
 
 
-struct BubbleLevel_Previews: PreviewProvider {
-    @StateObject static var motionDetector = MotionDetector(updateInterval: 0.01).started()
-    
-    static var previews: some View {
-        BubbleLevel()
-            .environmentObject(motionDetector)
-    }
+#Preview {
+    BubbleLevel()
+        .environmentObject(MotionDetector(updateInterval: 0.01).started())
 }
