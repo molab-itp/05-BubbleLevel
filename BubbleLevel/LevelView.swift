@@ -7,23 +7,22 @@ import SwiftUI
 struct LevelView: View {
   @Environment(MotionDetector.self) var motionDetector: MotionDetector
 
-    var body: some View {
-        VStack {
-            BubbleLevel()
-            OrientationDataView()
-                .padding(.top, 80)
-        }
-        .onAppear {
-            motionDetector.start()
-        }
-        .onDisappear {
-            motionDetector.stop()
-        }
+  var body: some View {
+    VStack {
+      BubbleLevel()
+      OrientationDataView()
+        .padding(.top, 80)
     }
+    .onAppear {
+      motionDetector.start()
+    }
+    .onDisappear {
+      motionDetector.stop()
+    }
+  }
 }
 
 #Preview {
-    LevelView()
+  LevelView()
     .environment(MotionDetector(updateInterval: 0.01).started())
 }
-                                         
