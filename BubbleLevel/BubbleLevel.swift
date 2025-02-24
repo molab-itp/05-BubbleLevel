@@ -5,7 +5,7 @@
 import SwiftUI
 
 struct BubbleLevel: View {
-  @Environment(MotionDetector.self) var detector: MotionDetector
+  @Environment(MotionDetector.self) var detector
 
   let range = Double.pi
   let levelSize: CGFloat = 300
