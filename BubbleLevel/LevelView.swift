@@ -5,7 +5,7 @@ See the License.txt file for this sample’s licensing information.
 import SwiftUI
 
 struct LevelView: View {
-    @EnvironmentObject var motionDetector: MotionDetector
+  @Environment(MotionDetector.self) var motionDetector: MotionDetector
 
     var body: some View {
         VStack {
@@ -24,6 +24,6 @@ struct LevelView: View {
 
 #Preview {
     LevelView()
-    .environmentObject(MotionDetector(updateInterval: 0.01).started())
+    .environment(MotionDetector(updateInterval: 0.01).started())
 }
                                          

@@ -5,7 +5,7 @@ See the License.txt file for this sample’s licensing information.
 import SwiftUI
 
 struct OrientationDataView: View {
-    @EnvironmentObject var detector: MotionDetector
+  @Environment(MotionDetector.self) var detector
 
     var rollString: String {
         detector.roll.describeAsFixedLengthString()
@@ -27,5 +27,5 @@ struct OrientationDataView: View {
 
 #Preview {
     OrientationDataView()
-        .environmentObject(MotionDetector(updateInterval: 0.01).started())
+        .environment(MotionDetector(updateInterval: 0.01).started())
 }
