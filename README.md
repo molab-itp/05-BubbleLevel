@@ -2,6 +2,8 @@
 
 Access and display device sensor data by subscribing to notifications.
 
+- Updated to use iOS 17 @Observable
+
 ## Overview
 
 Welcome to Bubble Level.
